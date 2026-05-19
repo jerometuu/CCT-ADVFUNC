@@ -1,13 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Everything is Math</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Time in Malaysia</title>
+    <style>
+        /* Modern Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            background-color: #f7f4f0; /* Almond/Cream */
+            color: #3d312a; /* Espresso Brown */
+            padding: 20px;
+        }
+
+        /* Header stays at the top, outside the grid */
+        header {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            text-align: center;
+            border-bottom: 3px solid #8c6d58;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
+            color: #1a2e40; /* Navy Blue */
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        /* The Responsive Grid Container */
+        .grid-container {
+            display: grid;
+            max-width: 1200px;
+            margin: 0 auto;
+            /* Gap between the cards */
+            gap: 25px; 
+            /* Default: 3 columns for desktop */
+            grid-template-columns: repeat(3, 1fr); 
+        }
+
+        /* Card Styling (Repeating Sections) */
+        .card {
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border-left: 5px solid #243e56; /* Navy Accent */
+            box-shadow: 0 4px 15px rgba(26, 46, 64, 0.06);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            color: #73533d; /* Warm Brown */
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* Iframe Box inside cards */
+        .graph-box {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; /* 4:3 Aspect Ratio */
+            background: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid #243e56;
+        }
+
+        .graph-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: #243e56;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4a3e36;
+        }
+
+        /* --- RESPONSIVENESS --- */
+
+        /* iPad / Tablet (2 columns) */
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Phone (1 column) */
+        @media (max-width: 650px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<h1>CCT Advance Function</h1>
-<p>here are the graph.</p>
-<iframe src="https://www.desmos.com/calculator/werrhfh38q?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    <header>
+        <h1>My time in Malaysia</h1>
+    </header>
+
+    <div class="grid-container">
+        
+        <!-- SECTION 1 (Copy this block for the other 8) -->
+        <section class="card">
+            <h2>Roti tissu</h2>
+            <div class="graph-box">
+                <iframe src="https://www.desmos.com/calculator" title="Desmos Graph"></iframe>
+            </div>
+            <h3>Observation Section</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            <h3>Final Analysis</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </section>
+
+        <!-- Repeat Section 2-9 below -->
+        <section class="card"><h2>Roti tissu</h2><div class="graph-box"><iframe src="https://www.desmos.com/calculator"></iframe></div><h3>Observation Section</h3><p>Dummy text for section two.</p><h3>Final Analysis</h3><p>More dummy text here.</p></section>
+        <section class="card"><h2>Roti tissu</h2><div class="graph-box"><iframe src="https://www.desmos.com/calculator"></iframe></div><h3>Observation Section</h3><p>Dummy text for section three.</p><h3>Final Analysis</h3><p>More dummy text here.</p></section>
+        <section class="card"><h2>Roti tissu</h2><div class="graph-box"><iframe src="https://www.desmos.com/calculator"></iframe></div><h3>Observation Section</h3><p>Dummy text for section four.</p><h3>Final Analysis</h3><p>More dummy text here.</p></section>
+        <section class="card"><h2>Roti tissu</h2><div class="graph-box"><iframe src="https://www.desmos.com/calculator"></iframe></div><h3>Observation Section</h3><p>Dummy text for section five.</p><h3>Final Analysis</h3><p>More dummy text here.</p></section>
+        <section class="card"><h2>Roti tissu</h2><div class="graph-box"><iframe src="https://www.desmos.com/calculator"></iframe></div><h3>Observation Section</h3><p>Dummy text for section six.</p><h3>Final Analysis</h3><p>More dummy text here.</p></section>
+        <section class="card"><h2>Roti tissu</h2><div class="graph-box"><iframe src="https://www.desmos.com/calculator"></iframe></div><h3>Observation Section</h3><p>Dummy text for section seven.</p><h3>Final Analysis</h3><p>More dummy text here.</p></section>
+        <section class="card"><h2>Roti tissu</h2><div class="graph-box"><iframe src="https://www.desmos.com/calculator"></iframe></div><h3>Observation Section</h3><p>Dummy text for section eight.</p><h3>Final Analysis</h3><p>More dummy text here.</p></section>
+        <section class="card"><h2>Roti tissu</h2><div class="graph-box"><iframe src="https://www.desmos.com/calculator"></iframe></div><h3>Observation Section</h3><p>Dummy text for section nine.</p><h3>Final Analysis</h3><p>More dummy text here.</p></section>
+
+    </div>
 
 </body>
 </html>
